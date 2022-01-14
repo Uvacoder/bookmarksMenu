@@ -1,9 +1,5 @@
 {
-  "background": {
-    "page": "app/background/background.html"
-  },
-  "browser_action": {
-    "default_icon": "icons/icon-24.png",
+  "action": {
     "default_popup": "app/popup/popup.html"
   },
   "default_locale": "en",
@@ -14,15 +10,13 @@
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
   },
-  "manifest_version": 2,
-  "minimum_chrome_version": "64",
+  "manifest_version": 3,
+  "minimum_chrome_version": "88",
   "name": "Bookmarks Menu",
   "options_page": "app/options/options.html",
   "permissions": [
-    "activeTab",
     "bookmarks",
-    "chrome://favicon/",
     "fontSettings"
   ],
-  "version": "2022.05.05"
+  "version": "2022.00.00"
 }

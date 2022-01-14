@@ -4,7 +4,7 @@ interface ChromeInterface {
     readonly tabs: TabsApi;
     readonly bookmarks: BookmarksApi;
     readonly windows: WindowsApi;
-    readonly browserAction: BrowserActionApi;
+    readonly action: BrowserActionApi;
 }
 
 declare const chrome: ChromeInterface;

@@ -46,14 +46,8 @@ export const i18nUtils = {
     }
 };
 
-export function isBookmarklet(url: string): boolean {
-    return url.startsWith('javascript:');
-}
-
 export function getFavicon(url: string): string {
     return url == undefined
         ? '../../icons/' + (isWindows ? 'folder-win.png' : 'folder.png')
-        : isBookmarklet(url)
-            ? '../../icons/js.png'
-            : 'chrome://favicon/' + url;
+        : '../../icons/icon-16.png'; //'chrome://favicon/' + url;
 }

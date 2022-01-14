@@ -1,6 +1,6 @@
 'use strict';
 
-import { $, all, getFavicon, isBookmarklet, i18nUtils, E } from '../common/common.js';
+import { $, all, getFavicon, i18nUtils, E } from '../common/common.js';
 import { Settings } from '../common/settings.js';
 
 const config = {
@@ -105,12 +105,7 @@ class Bookmark extends HTMLLIElement {
   }
 
   open() {
-    const url = this.url;
-    if (isBookmarklet(url)) {
-      chrome.tabs.executeScript({ code: decodeURI(url.substr(11)) });
-    } else {
-      chrome.tabs.update({ url: url });
-    }
+    chrome.tabs.update({ url: this.url });
     closePopup();
   }
 

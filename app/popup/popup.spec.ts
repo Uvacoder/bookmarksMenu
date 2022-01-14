@@ -285,20 +285,6 @@ describe('popup.html', () => {
         expect(window.close).toHaveBeenCalled();
       });
 
-      it('open bookmark: js', () => {
-        const first = bookmark(1, 'alert', 'javascript:alert("Hello")');
-        givenBookmarks([], [first, bookmark()]);
-        chrome.tabs.executeScript = jest.fn();
-        window.close = jest.fn();
-
-        clickOn(first, { button: leftButton });
-
-        expect(chrome.tabs.executeScript).toHaveBeenCalledWith({
-          code: 'alert("Hello")'
-        });
-        expect(window.close).toHaveBeenCalled();
-      });
-
       it('open bookmark with ctrlKey', () => {
         const first = bookmark();
         const second = bookmark();
